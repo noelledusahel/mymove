@@ -623,7 +623,7 @@ jobs:
   deploy_lee_app:
     executor: mymove_small
     environment:
-      - APP_ENVIRONMENT: 'lee'
+      - APP_ENVIRONMENT: 'experimental'
     steps:
       - deploy_app_steps:
           compare_host: "" # leave blank since we want lee to be able to roll back
@@ -633,7 +633,7 @@ jobs:
   deploy_lee_app_client_tls:
     executor: mymove_small
     environment:
-      - APP_ENVIRONMENT: 'lee'
+      - APP_ENVIRONMENT: 'experimental'
     steps:
       - deploy_app_client_tls_steps:
           compare_host: "" # leave blank since we want lee to be able to roll back

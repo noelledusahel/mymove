@@ -607,7 +607,7 @@ jobs:
   deploy_lee_migrations:
     executor: mymove_small
     environment:
-      - APP_ENVIRONMENT: 'lee'
+      - APP_ENVIRONMENT: 'experimental'
     steps:
       - deploy_migrations_steps
 
@@ -615,7 +615,7 @@ jobs:
   deploy_lee_tasks:
     executor: mymove_small
     environment:
-      - APP_ENVIRONMENT: 'lee'
+      - APP_ENVIRONMENT: 'experimental'
     steps:
       - deploy_tasks_steps
 
@@ -792,34 +792,30 @@ workflows:
             - build_app
             - build_migrations
             - acceptance_tests_local
-          # if testing on experimental, you can disable these tests by using the commented block below.
-          # filters:
-          #   branches:
-          #     ignore: placeholder_branch_name
+          filters:
+            branches:
+              ignore: app-lee
 
       - client_test:
           requires:
             - pre_deps_yarn
-          # if testing on experimental, you can disable these tests by using the commented block below.
-          # filters:
-          #   branches:
-          #     ignore: placeholder_branch_name
+          filters:
+            branches:
+              ignore: app-lee
 
       - server_test:
           requires:
             - pre_deps_golang
-          # if testing on experimental, you can disable these tests by using the commented block below.
-          # filters:
-          #   branches:
-          #     ignore: placeholder_branch_name
+          filters:
+            branches:
+              ignore: app-lee
 
       - server_test_coverage:
           requires:
             - pre_deps_golang
-          # if testing on experimental, you can disable these tests by using the commented block below.
-          # filters:
-          #   branches:
-          #     ignore: placeholder_branch_name
+          filters:
+            branches:
+              ignore: app-lee
 
       - build_app:
           requires:

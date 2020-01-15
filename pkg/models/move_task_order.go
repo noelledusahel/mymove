@@ -18,6 +18,7 @@ type MoveTaskOrder struct {
 	ID                 uuid.UUID        `db:"id"`
 	MoveOrder          MoveOrder        `belongs_to:"move_orders"`
 	MTOServiceItems    []MTOServiceItem `has_many:"mto_service_items"`
+	MTOShipments       []MTOShipment    `has_many:"mto_shipments"`
 	PaymentRequests    []PaymentRequest `has_many:"payment_requests"`
 	MoveOrderID        uuid.UUID        `db:"move_order_id"`
 	ReferenceID        *string          `db:"reference_id"`

@@ -1082,6 +1082,60 @@ func init() {
         }
       ]
     },
+    "/move_task_orders/{moveTaskOrderID}/mto_shipments": {
+      "get": {
+        "description": "Gets all shipments for a move task order",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "mtoShipment"
+        ],
+        "summary": "Gets all shipments for a move task order",
+        "operationId": "listMTOShipments",
+        "responses": {
+          "200": {
+            "description": "Successfully retrieved all line items for a move task order",
+            "schema": {
+              "$ref": "#/definitions/MTOServiceItems"
+            }
+          },
+          "404": {
+            "description": "The requested resource wasn't found",
+            "schema": {
+              "$ref": "#/responses/NotFound"
+            }
+          },
+          "422": {
+            "description": "Validation error",
+            "schema": {
+              "$ref": "#/definitions/ValidationError"
+            }
+          },
+          "500": {
+            "description": "A server error occurred",
+            "schema": {
+              "$ref": "#/responses/ServerError"
+            }
+          }
+        },
+        "x-swagger-roles": [
+          "transportation_invoicing_officer",
+          "transportation_ordering_officer",
+          "contracting_officer",
+          "ppm_office_users"
+        ]
+      },
+      "parameters": [
+        {
+          "type": "string",
+          "description": "ID of move task order",
+          "name": "moveTaskOrderID",
+          "in": "path",
+          "required": true
+        }
+      ]
+    },
     "/payment-requests": {
       "get": {
         "description": "Gets a list of payment requests",
@@ -3438,6 +3492,66 @@ func init() {
           "type": "string",
           "format": "uuid",
           "description": "ID of move order for mto service item to use",
+          "name": "moveTaskOrderID",
+          "in": "path",
+          "required": true
+        }
+      ]
+    },
+    "/move_task_orders/{moveTaskOrderID}/mto_shipments": {
+      "get": {
+        "description": "Gets all shipments for a move task order",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "mtoShipment"
+        ],
+        "summary": "Gets all shipments for a move task order",
+        "operationId": "listMTOShipments",
+        "responses": {
+          "200": {
+            "description": "Successfully retrieved all line items for a move task order",
+            "schema": {
+              "$ref": "#/definitions/MTOServiceItems"
+            }
+          },
+          "404": {
+            "description": "The requested resource wasn't found",
+            "schema": {
+              "description": "The requested resource wasn't found",
+              "schema": {
+                "$ref": "#/definitions/Error"
+              }
+            }
+          },
+          "422": {
+            "description": "Validation error",
+            "schema": {
+              "$ref": "#/definitions/ValidationError"
+            }
+          },
+          "500": {
+            "description": "A server error occurred",
+            "schema": {
+              "description": "A server error occurred",
+              "schema": {
+                "$ref": "#/definitions/Error"
+              }
+            }
+          }
+        },
+        "x-swagger-roles": [
+          "transportation_invoicing_officer",
+          "transportation_ordering_officer",
+          "contracting_officer",
+          "ppm_office_users"
+        ]
+      },
+      "parameters": [
+        {
+          "type": "string",
+          "description": "ID of move task order",
           "name": "moveTaskOrderID",
           "in": "path",
           "required": true

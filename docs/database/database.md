@@ -66,7 +66,7 @@ The MilMove server through the use of environment variables will use reach out t
 },
 ```
 
-Update the related environment configuration to match. Note that the database user is normally different than `master` as additional configuration is needed to allow a database user to login via IAM. MilMove convention for IAM enabled user is `ecs_user`. Below is a snippet of the [experimental environment config](https://github.com/transcom/mymove/blob/master/config/env/experimental.env):
+Update the related environment configuration to match. Note that the database user is normally different than `master` as additional configuration is needed to allow a database user to login via IAM. MilMove convention for IAM enabled user is `ecs_user`. Below is a snippet of the [experimental environment config](../../config/env/experimental.env):
 
 ```ini
 DB_USER=ecs_user

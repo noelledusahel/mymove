@@ -5,7 +5,7 @@ Experimental is the MilMove environment that can be used to test out a code chan
 ## How to do it
 
 To deploy to experimental, you'll need to trigger the CircleCI workflow to include the deploy to experimental steps.
-Edit [the config file](https://github.com/transcom/mymove/blob/master/.circleci/config.yml) by replacing all instances of `placeholder_branch_name` with your branch name. You'll also want to uncomment any of these lines (and related ones), like this:
+Edit [the config file](../../.circleci/config.yml) by replacing all instances of `placeholder_branch_name` with your branch name. You'll also want to uncomment any of these lines (and related ones), like this:
 
 ```sh
 # if testing on experimental, you can disable these tests by using the commented block below.
@@ -18,7 +18,7 @@ Best practices mean you should announce deploys to experimental in the `#dp3-exp
 
 ## I've got a server-side feature flag
 
-You'll need to add it to [experimental config file](https://github.com/transcom/mymove/blob/master/config/env/experimental.env). In [the container config file](https://github.com/transcom/mymove/blob/master/config/app.container-definition.json) you'll need to add it by using mustache syntax.
+You'll need to add it to [experimental config file](../../config/env/experimental.env). In [the container config file](../../config/app.container-definition.json) you'll need to add it by using mustache syntax.
 
 ## Don't forget to clean up your branch for your pr review
 

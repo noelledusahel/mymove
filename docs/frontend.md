@@ -123,7 +123,7 @@ MilMove is transitioning from anarchistic styling to more organized and standard
 
 #### Using Sass and CSS Modules
 
-* All new components should utilize [Sass](https://sass-lang.com/documentation/file.SASS_REFERENCE.html) and [CSS modules](https://github.com/css-modules/css-modules) (See [ADR](https://github.com/transcom/mymove/blob/master/docs/adr/0031-css-tooling.md)).  To apply Sass and CSS Modules, name files  with this syntax: `<component>.module.scss`
+* All new components should utilize [Sass](https://sass-lang.com/documentation/file.SASS_REFERENCE.html) and [CSS modules](https://github.com/css-modules/css-modules) (See [ADR](./adr/0031-css-tooling.md)).  To apply Sass and CSS Modules, name files  with this syntax: `<component>.module.scss`
 * Use CSS Modules' [`composes`](https://bambielli.com/til/2017-08-11-css-modules-composes/#) to build a new class out of other pre-defined classes
 * Where to put styles?
   * For global styles, such as colors and themes, utilize global variables in files such as `colors.scss`

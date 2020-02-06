@@ -362,7 +362,7 @@ This background job is built as a separate binary which can be built using `make
 When creating new features, it is helpful to have sample data for the feature to interact with. The TSP Award Queue is an example of that--it matches shipments to TSPs, and it's hard to tell if it's working without some shipments and TSPs in the database!
 
 * `make bin/generate-test-data` will build the fake data generator binary
-* `bin/generate-test-data -named-scenario="e2e_basic"` will populate the database with a handful of users in various stages of progress along the flow. The emails are named accordingly (see [`e2ebasic.go`](https://github.com/transcom/mymove/blob/master/pkg/testdatagen/scenario/e2ebasic.go)). Alternatively, run `make db_dev_e2e_populate` to reset your db and populate it with e2e user flow cases.
+* `bin/generate-test-data -named-scenario="e2e_basic"` will populate the database with a handful of users in various stages of progress along the flow. The emails are named accordingly (see [`e2ebasic.go`](./pkg/testdatagen/scenario/e2ebasic.go)). Alternatively, run `make db_dev_e2e_populate` to reset your db and populate it with e2e user flow cases.
 * `bin/generate-test-data` will run binary and create a preconfigured set of test data. To determine the data scenario you'd like to use, check out scenarios in the `testdatagen` package. Each scenario contains a description of what data will be created when the scenario is run. Pass the scenario in as a flag to the generate-test-data function. A sample command: `./bin/generate-test-data -scenario=2`.
 
 There is also a package (`/pkg/testdatagen`) that can be imported to create arbitrary test data. This could be used in tests, so as not to duplicate functionality.
@@ -394,7 +394,7 @@ You can view the API's documentation (powered by Swagger UI) at <http://localhos
 There are a few handy targets in the Makefile to help you run tests:
 
 * `make client_test`: Run front-end testing suites.
-* `make server_test`: Run back-end testing suites. [Additional info for running go tests](https://github.com/transcom/mymove/blob/master/docs/how-to/run-go-tests.md)
+* `make server_test`: Run back-end testing suites. [Additional info for running go tests](./docs/how-to/run-go-tests.md)
 * `make e2e_test`: Run e2e testing suite.
 * `make test`: Run e2e, client- and server-side testing suites.
 
@@ -412,7 +412,7 @@ In development mode, logs from the `milmove` process are written to `logs/dev.lo
 
 ### Database
 
-* Read [Querying the Database Safely](https://github.com/transcom/mymove/blob/master/docs/backend.md#querying-the-database-safely) to prevent SQL injections! *
+* Read [Querying the Database Safely](./docs/backend.md#querying-the-database-safely) to prevent SQL injections! *
 
 A few commands exist for starting and stopping the DB docker container:
 

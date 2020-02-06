@@ -25,7 +25,7 @@ Resources:
 
 * [Mockery Mock Generation Library](https://github.com/vektra/mockery)
 * [Testify/Mock Assertion Library](https://godoc.org/github.com/stretchr/testify)
-* [How To Generate Mocks with Mockery in MilMove Project](https://github.com/transcom/mymove/docs/how-to/generate-mocks-with-mockery.md)
+* [How To Generate Mocks with Mockery in MilMove Project](../how-to/generate-mocks-with-mockery.md)
 * [Mocking Dependencies in Go](https://medium.com/agrea-technogies/mocking-dependencies-in-go-bb9739fef008)
 * [Improving Your Go Tests and Mocks with Testify](https://tutorialedge.net/golang/improving-your-tests-with-testify-go/)
 

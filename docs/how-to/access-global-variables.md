@@ -22,9 +22,9 @@ We use command line flags to get the environment variables. The flags are set in
 
 To add an application variable to the handler context, we create essentially a getter and setter in the handler context.
 (Ex. `SetUseSecureCooking` and `UseSecureCookie`)
-Follow the pattern in [pkg/handlers/contexts.go](https://github.com/transcom/mymove/blob/master/pkg/handlers/contexts.go)
+Follow the pattern in [pkg/handlers/contexts.go](../../pkg/handlers/contexts.go)
 
-Then, in the [cmd/milmove/serve.go](https://github.com/transcom/mymove/blob/master/cmd/milmove/serve.go) file, in the function `serveFunction` set the value using the setter.
+Then, in the [cmd/milmove/serve.go](../../cmd/milmove/serve.go) file, in the function `serveFunction` set the value using the setter.
 For example:
 
 ```go

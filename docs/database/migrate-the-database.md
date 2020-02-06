@@ -189,7 +189,7 @@ at the front of a file).
 - If the file is to be found on S3, it is streamed directly into memory instead of downloading.
 - If it is to be found locally, the script looks for it in the listed path.
 
-There is an example of local secure migrations [in the repo](https://github.com/transcom/mymove/blob/master/local_migrations/).
+There is an example of local secure migrations [in the repo](../../local_migrations/).
 
 ### Downloading Secure Migrations
 

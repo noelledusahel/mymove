@@ -18,4 +18,4 @@ ecs-service-logs show --cluster app-staging --service app --git-branch "placehol
 If you want to see logs from something that is stopped you can change to `--status "STOPPED"` in the above commands.
 
 You can do a lot more with this command. Check out the rest of the information in the
-[ecs-service-logs README.md](https://github.com/transcom/mymove/blob/master/cmd/ecs-service-logs/README.md).
+[ecs-service-logs README.md](../../cmd/ecs-service-logs/README.md).
